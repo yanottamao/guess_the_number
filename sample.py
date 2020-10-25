@@ -1,12 +1,15 @@
 import random
 
-rd = random.randint(0, 99)
-print('Guess the Random Number Game')
-print('----------------------------')
-print('Please Enter Number Beetween 0 - 99')
-gs = int(input("Enter Your Guess: "))
+rd = random.randint(1, 99)
+gs = 0
 
 while rd != gs:
+    print('Guess the Random Number Game')
+    print('----------------------------')
+    print('Please Enter Number Beetween 0 - 99')
+    print(rd)
+    gs = int(input("Enter Your Guess: "))
+
     if gs < rd:
         print('Number is higher than your guess')
         gs = int(input("Enter Your Guess: "))
