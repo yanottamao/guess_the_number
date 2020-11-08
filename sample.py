@@ -47,7 +47,7 @@ def check(rd, gs):  # simple logic comparator
 def win(rd):    # win messages
     print('Congratulation You Guess It!')
     print('The Mystery Number is ' + str(rd) + '.\n')
-    exitcode = input('Press Any Key to Exit... ')
+    input('Press Any Key to Exit... ')
 
 
 if __name__ == "__main__":
