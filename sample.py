@@ -11,7 +11,7 @@ def main():  # start messages
 
 
 def mp():   # initial multi player mode
-    mpl = raw_input('Multi Player Mode: ')
+    mpl = input('Multi Player Mode: ')
     print('mp is ' + mpl)   # mpl input checker
     if mpl.lower() in ['y', 'yes']:
         print('This is Multi Player Mode')
@@ -47,6 +47,7 @@ def check(rd, gs):  # simple logic comparator
 def win(rd):    # win messages
     print('Congratulation You Guess It!')
     print('The Mystery Number is ' + str(rd) + '.\n')
+    exitcode = input('Press Any Key to Exit... ')
 
 
 if __name__ == "__main__":
