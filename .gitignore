@@ -1,0 +1,6 @@
+# untracked environment files
+
+.vscode
+__pycache__
+build
+sample.spec
