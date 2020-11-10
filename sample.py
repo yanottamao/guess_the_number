@@ -23,10 +23,15 @@ def mp():   # initial multi player mode
 
 
 def guess():    # standar random 1 to 99
-    print('Please Enter Number Beetween 1 - 99')
+    print('Guessing Range Input')
+    # first number range
+    first = int(input('Please Enter Initial Number Range: '))
+    # max number range
+    last = int(input('Please Enter Maximum Number Range: '))
+    print('Please Enter Number Beetween ' + str(first) + ' - ' + str(last))
     global rd
     global gs
-    rd = random.randint(1, 99)
+    rd = random.randint(first, last)
     gs = 0
     gs = int(input('Enter Your Guess: '))
     return rd, gs
