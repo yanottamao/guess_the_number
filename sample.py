@@ -42,11 +42,11 @@ def guess():    # standar random 1 to 99
 def check(rd, gs, pr):  # simple logic comparator
     while rd != gs:
         if gs < rd:
-            print('Hint: Number is Higher Than Your Guess!' + str(pr) + '\n')
+            print('Hint: Number is Higher Than Your Guess! (' + str(pr) + ')\n')
             gs = int(input("Enter Your Guess: "))
             pr = gs
         elif gs > rd:
-            print('Hint: Number is Lower Than Your Guess!' + str(pr) + '\n')
+            print('Hint: Number is Lower Than Your Guess! (' + str(pr) + ')\n')
             gs = int(input("Enter Your Guess: "))
             pr = gs
         else:
