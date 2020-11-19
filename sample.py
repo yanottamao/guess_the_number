@@ -1,15 +1,6 @@
 # library used
 import random
 
-
-def main():  # start messages
-    print('Guess the Random Number Game')
-    print('----------------------------')
-    guess()
-    check(rd, gs, pr)
-    win(rd)
-
-
 def mp():   # initial multi player mode
     mpl = input('Multi Player Mode: ')
     print('mp is ' + mpl)   # mpl input checker
@@ -34,30 +25,44 @@ def guess():    # standar random 1 to 99
     global pr
     rd = random.randint(first, last)
     gs = 0
+    print('\nTurn 1')
     gs = int(input('Enter Your Guess: '))
     pr = gs
     return rd, gs, pr
 
 
 def check(rd, gs, pr):  # simple logic comparator
+    global turn
+    turn = 1
     while rd != gs:
         if gs < rd:
+            turn += 1
             print('Hint: Number is Higher Than Your Guess! (' + str(pr) + ')\n')
+            print('Turn ' + str(turn))
             gs = int(input("Enter Your Guess: "))
             pr = gs
         elif gs > rd:
+            turn += 1
             print('Hint: Number is Lower Than Your Guess! (' + str(pr) + ')\n')
+            print('Turn ' + str(turn))
             gs = int(input("Enter Your Guess: "))
             pr = gs
         else:
-            break
+            return turn
 
 
-def win(rd):    # win messages
+def win(rd, turn):    # win messages
     print('Congratulation You Guess It!')
-    print('The Mystery Number is ' + str(rd) + '.\n')
+    print('The Mystery Number is ' + str(rd) + '.')
+    print('You Guess It in ' + str(turn) + ' Turn.\n')
     input('Press Any Key to Exit... ')
 
+def main():  # start messages
+    print('Guess the Random Number Game')
+    print('----------------------------')
+    guess()
+    check(rd, gs, pr)
+    win(rd, turn)
 
 if __name__ == "__main__":
     main()
