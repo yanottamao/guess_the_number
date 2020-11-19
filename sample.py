@@ -6,7 +6,7 @@ def main():  # start messages
     print('Guess the Random Number Game')
     print('----------------------------')
     guess()
-    check(rd, gs)
+    check(rd, gs, pr)
     win(rd)
 
 
@@ -31,20 +31,24 @@ def guess():    # standar random 1 to 99
     print('Please Enter Number Beetween ' + str(first) + ' - ' + str(last))
     global rd
     global gs
+    global pr
     rd = random.randint(first, last)
     gs = 0
     gs = int(input('Enter Your Guess: '))
-    return rd, gs
+    pr = gs
+    return rd, gs, pr
 
 
-def check(rd, gs):  # simple logic comparator
+def check(rd, gs, pr):  # simple logic comparator
     while rd != gs:
         if gs < rd:
-            print('Hint: Number is Higher Than Your Guess!\n')
+            print('Hint: Number is Higher Than Your Guess!' + str(pr) + '\n')
             gs = int(input("Enter Your Guess: "))
+            pr = gs
         elif gs > rd:
-            print('Hint: Number is Lower Than Your Guess!\n')
+            print('Hint: Number is Lower Than Your Guess!' + str(pr) + '\n')
             gs = int(input("Enter Your Guess: "))
+            pr = gs
         else:
             break
 
