@@ -1,7 +1,7 @@
 # library used
 import random
 
-def mp():   # initial multi player mode
+def mpmain():   # initial multi player mode
     mpl = input('Multi Player Mode: ')
     print('mp is ' + mpl)   # mpl input checker
     if mpl.lower() in ['y', 'yes']:
@@ -12,10 +12,13 @@ def mp():   # initial multi player mode
         guess()
         check(rd, gs, pr)
         win(rd, turn)
-
     else:
         print('Please Enter Yes/Y or No/N ')
 
+def multipl():
+    print('This is Multi Player Mode')
+    mplc = int(input('Please Enter Player Count 2 - 4'))
+    print('Player Count: ' + mplc)
 
 def guess():    # standar random 1 to 99
     print('Guessing Range Input')
@@ -64,7 +67,7 @@ def win(rd, turn):    # win messages
 def main():  # start messages
     print('Guess the Random Number Game')
     print('----------------------------')
-    mp()
+    mpmain()
     
 if __name__ == "__main__":
     main()
