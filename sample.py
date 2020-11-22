@@ -9,6 +9,10 @@ def mp():   # initial multi player mode
         # mplc = ('Please Enter Player Count: ')  # player count for future
     elif mpl.lower() in ['n', 'no']:
         print('This is Single Player Mode')
+        guess()
+        check(rd, gs, pr)
+        win(rd, turn)
+
     else:
         print('Please Enter Yes/Y or No/N ')
 
@@ -60,9 +64,7 @@ def win(rd, turn):    # win messages
 def main():  # start messages
     print('Guess the Random Number Game')
     print('----------------------------')
-    guess()
-    check(rd, gs, pr)
-    win(rd, turn)
-
+    mp()
+    
 if __name__ == "__main__":
     main()
