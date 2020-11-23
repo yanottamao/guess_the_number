@@ -19,6 +19,11 @@ def multipl():
     print('This is Multi Player Mode')
     mplc = int(input('Please Enter Player Count 2 - 4'))
     print('Player Count: ' + mplc)
+    mparray = arr[mplc]
+    print('Player 1')
+    guess()
+    check(rd, gs, pr)
+    win(rd, turn)
 
 def guess():    # standar random 1 to 99
     print('Guessing Range Input')
