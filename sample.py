@@ -6,7 +6,7 @@ def mpmain():   # initial multi player mode
     print('mp is ' + mpl)   # mpl input checker
     if mpl.lower() in ['y', 'yes']:
         print('This is Multi Player Mode')
-        # mplc = ('Please Enter Player Count: ')  # player count for future
+        multipl()
     elif mpl.lower() in ['n', 'no']:
         print('This is Single Player Mode')
         guess()
@@ -17,13 +17,14 @@ def mpmain():   # initial multi player mode
 
 def multipl():
     print('This is Multi Player Mode')
-    mplc = int(input('Please Enter Player Count 2 - 4'))
-    print('Player Count: ' + mplc)
-    mparray = arr[mplc]
-    print('Player 1')
-    guess()
-    check(rd, gs, pr)
-    win(rd, turn)
+    mplc = int(input('Please Enter Player Count 2 - 4: '))
+    print('Player Count: ' + str(mplc))
+    for i in range(mplc):
+        i += 1
+        print('Player ' + str(i))
+        guess()
+        check(rd, gs, pr)
+        win(rd, turn)
 
 def guess():    # standar random 1 to 99
     print('Guessing Range Input')
@@ -67,7 +68,7 @@ def win(rd, turn):    # win messages
     print('Congratulation You Guess It!')
     print('The Mystery Number is ' + str(rd) + '.')
     print('You Guess It in ' + str(turn) + ' Turn.\n')
-    input('Press Any Key to Exit... ')
+    input('Press Any Key to Exit... \n')
 
 def main():  # start messages
     print('Guess the Random Number Game')
