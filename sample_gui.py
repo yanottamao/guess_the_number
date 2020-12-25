@@ -1,14 +1,41 @@
 import tkinter as tk
+from tkinter.constants import NSEW
+
+# window = tk.Tk()
+# greeting = tk.Label(text="Hello World", fg="white",
+#                     bg="black", width=10, height=10)
+# button = tk.Button(text="Click me!", fg="yellow",
+#                    bg="blue", width=25, height=5)
+# label = tk.Label(text="Name")
+# entry = tk.Entry(bg="green", fg="yellow", width=50)
+# greeting.pack()
+# button.pack()
+# label.pack()
+# entry.pack()
+
+
+def increase():
+    value = int(lbl_value["text"])
+    lbl_value["text"] = f"{value + 1}"
+
+
+def decrease():
+    value = int(lbl_value["text"])
+    lbl_value["text"] = f"{value - 1}"
+
 
 window = tk.Tk()
-greeting = tk.Label(text="Hello World", fg="white",
-                    bg="black", width=10, height=10)
-button = tk.Button(text="Click me!", fg="yellow",
-                   bg="blue", width=25, height=5)
-label = tk.Label(text="Name")
-entry = tk.Entry(bg="green", fg="yellow", width=50)
-greeting.pack()
-button.pack()
-label.pack()
-entry.pack()
+
+window.rowconfigure(0, minsize=50, weight=1)
+window.columnconfigure([0, 1, 2], minsize=50, weight=1)
+
+btn_decrease = tk.Button(master=window, text="-", command=decrease)
+btn_decrease.grid(row=0, column=0, sticky="nsew")
+
+lbl_value = tk.Label(master=window, text="0")
+lbl_value.grid(row=0, column=1)
+
+btn_increase = tk.Button(master=window, text="+", command=increase)
+btn_increase.grid(row=0, column=2, sticky="nsew")
+
 window.mainloop()
