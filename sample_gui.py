@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter.constants import NSEW
+import random
 
 # window = tk.Tk()
 # greeting = tk.Label(text="Hello World", fg="white",
@@ -14,28 +15,44 @@ from tkinter.constants import NSEW
 # entry.pack()
 
 
-def increase():
-    value = int(lbl_value["text"])
-    lbl_value["text"] = f"{value + 1}"
+# def increase():
+#     value = int(lbl_value["text"])
+#     lbl_value["text"] = f"{value + 1}"
 
 
-def decrease():
+# def decrease():
+#     value = int(lbl_value["text"])
+#     lbl_value["text"] = f"{value - 1}"
+
+
+# window = tk.Tk()
+
+# window.rowconfigure(0, minsize=50, weight=1)
+# window.columnconfigure([0, 1, 2], minsize=50, weight=1)
+
+# btn_decrease = tk.Button(master=window, text="-", command=decrease)
+# btn_decrease.grid(row=0, column=0, sticky="nsew")
+
+# lbl_value = tk.Label(master=window, text="0")
+# lbl_value.grid(row=0, column=1)
+
+# btn_increase = tk.Button(master=window, text="+", command=increase)
+# btn_increase.grid(row=0, column=2, sticky="nsew")
+
+def random_dice():
     value = int(lbl_value["text"])
-    lbl_value["text"] = f"{value - 1}"
+    lbl_value["text"] = f"{random.randint(1, 6)}"
 
 
 window = tk.Tk()
 
-window.rowconfigure(0, minsize=50, weight=1)
-window.columnconfigure([0, 1, 2], minsize=50, weight=1)
+window.rowconfigure([0, 1], minsize=50, weight=1)
+window.columnconfigure(0, minsize=50, weight=1)
 
-btn_decrease = tk.Button(master=window, text="-", command=decrease)
-btn_decrease.grid(row=0, column=0, sticky="nsew")
+btn_roll = tk.Button(master=window, text="ROLL", command=random_dice)
+btn_roll.grid(row=0, column=0, sticky="nsew")
 
 lbl_value = tk.Label(master=window, text="0")
-lbl_value.grid(row=0, column=1)
-
-btn_increase = tk.Button(master=window, text="+", command=increase)
-btn_increase.grid(row=0, column=2, sticky="nsew")
+lbl_value.grid(row=1, column=0, sticky="nsew")
 
 window.mainloop()
