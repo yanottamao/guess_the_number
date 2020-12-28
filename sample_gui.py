@@ -55,4 +55,23 @@ window = tk.Tk()
 # lbl_value = tk.Label(master=window, text="0")
 # lbl_value.grid(row=1, column=0, sticky="nsew")
 
+
+def fah_cel():
+    tempf = float(temp["text"])
+    value = float(lbl_value["text"])
+    lbl_value["text"] = f"{((tempf - 32) * 5/9)}"
+
+
+window.rowconfigure([0], minsize=50, weight=1)
+window.columnconfigure([0, 1], minsize=50, weight=1)
+
+temp = tk.Entry(master=window, text="32")
+temp.grid(row=0, column=0, sticky="nsew")
+
+btn_convert = tk.Button(master=window, text="->", command=fah_cel)
+btn_convert.grid(row=0, column=1, sticky="nsew")
+
+lbl_value = tk.Label(master=window, text="0")
+lbl_value.grid(row=0, column=2)
+
 window.mainloop()
