@@ -124,22 +124,34 @@ from typing import Text
 
 # window.mainloop()
 
+# window = tk.Tk()
+
+# for i in range(3):
+#     window.columnconfigure(i, weight=1, minsize=75)
+#     window.rowconfigure(i, weight=1, minsize=50)
+
+#     for j in range(0, 3):
+#         frame = tk.Frame(
+#             master=window,
+#             relief=tk.RAISED,
+#             borderwidth=1
+#         )
+
+#         frame.grid(row=i, column=j, padx=5, pady=5)
+
+#         label = tk.Label(master=frame, text=f"Row {i}\nColumn {j}")
+#         label.pack(padx=5, pady=5)
+
+# window.mainloop()
+
 window = tk.Tk()
+window.columnconfigure(0, minsize=250)
+window.rowconfigure([0, 1], minsize=100)
 
-for i in range(3):
-    window.columnconfigure(i, weight=1, minsize=75)
-    window.rowconfigure(i, weight=1, minsize=50)
+label1 = tk.Label(text="A")
+label1.grid(row=0, column=0)
 
-    for j in range(0, 3):
-        frame = tk.Frame(
-            master=window,
-            relief=tk.RAISED,
-            borderwidth=1
-        )
-
-        frame.grid(row=i, column=j, padx=5, pady=5)
-
-        label = tk.Label(master=frame, text=f"Row {i}\nColumn {j}")
-        label.pack(padx=5, pady=5)
+label2 = tk.Label(text="B")
+label2.grid(row=1, column=0)
 
 window.mainloop()
