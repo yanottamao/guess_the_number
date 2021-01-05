@@ -2,6 +2,64 @@ import tkinter as tk
 
 window = tk.Tk()
 
+num = 1
+
+
+def guess_text():
+    guess = int(lbl_guess["text"])
+    lbl_guess["text"] = f"{guess + 1}"
+
+
+def num_1():
+    num = 1
+    return num
+
+
+def num_2():
+    num = 2
+    return num
+
+
+def num_3():
+    num = 3
+    return num
+
+
+def num_4():
+    num = 4
+    return num
+
+
+def num_5():
+    num = 5
+    return num
+
+
+def num_6():
+    num = 6
+    return num
+
+
+def num_7():
+    num = 7
+    return num
+
+
+def num_8():
+    num = 8
+    return num
+
+
+def num_9():
+    num = 9
+    return num
+
+
+def num_0():
+    num = 0
+    return num
+
+
 window.rowconfigure([0, 1, 2, 3, 4, 5], minsize=75, weight=1)
 window.columnconfigure([0, 1, 2], minsize=75, weight=1)
 
