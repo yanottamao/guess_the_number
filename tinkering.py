@@ -60,6 +60,15 @@ def num_0():
     return num
 
 
+def guess_num(num, guess):
+    if num < guess:
+        print("Guess higher")
+    elif num > guess:
+        print("Guess lower")
+    else:
+        print("You've got it")
+
+
 window.rowconfigure([0, 1, 2, 3, 4, 5], minsize=75, weight=1)
 window.columnconfigure([0, 1, 2], minsize=75, weight=1)
 
