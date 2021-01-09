@@ -81,34 +81,34 @@ lbl_guess.grid(row=0, column=0, sticky="nsew")
 # btn_etr = tk.Button(master=window, text="Enter")
 # btn_etr.grid(row=2, rowspan=2, column=3, sticky="nsew")
 
-btn_1 = tk.Button(master=window, text="1", num=1)
+btn_1 = tk.Button(master=window, text="1", command="num=1")
 btn_1.grid(row=1, column=0, sticky="nsew")
 
-btn_2 = tk.Button(master=window, text="2", num=2)
+btn_2 = tk.Button(master=window, text="2", command="num=1")
 btn_2.grid(row=1, column=1, sticky="nsew")
 
-btn_3 = tk.Button(master=window, text="3", num=3)
+btn_3 = tk.Button(master=window, text="3", command="num=1")
 btn_3.grid(row=1, column=2, sticky="nsew")
 
-btn_4 = tk.Button(master=window, text="4", num=4)
+btn_4 = tk.Button(master=window, text="4", command="num=1")
 btn_4.grid(row=2, column=0, sticky="nsew")
 
-btn_5 = tk.Button(master=window, text="5", num=5)
+btn_5 = tk.Button(master=window, text="5", command="num=1")
 btn_5.grid(row=2, column=1, sticky="nsew")
 
-btn_6 = tk.Button(master=window, text="6", num=6)
+btn_6 = tk.Button(master=window, text="6", command="num=1")
 btn_6.grid(row=2, column=2, sticky="nsew")
 
-btn_7 = tk.Button(master=window, text="7", num=7)
+btn_7 = tk.Button(master=window, text="7", command="num=1")
 btn_7.grid(row=3, column=0, sticky="nsew")
 
-btn_8 = tk.Button(master=window, text="8", num=8)
+btn_8 = tk.Button(master=window, text="8", command="num=1")
 btn_8.grid(row=3, column=1, sticky="nsew")
 
-btn_9 = tk.Button(master=window, text="9", num=9)
+btn_9 = tk.Button(master=window, text="9", command="num=1")
 btn_9.grid(row=3, column=2, sticky="nsew")
 
-btn_0 = tk.Button(master=window, text="0", num=0)
+btn_0 = tk.Button(master=window, text="0", command="num=1")
 btn_0.grid(row=4, column=1, sticky="nsew")
 
 btn_clr = tk.Button(master=window, text="Clear")
