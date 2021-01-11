@@ -1,63 +1,22 @@
 import tkinter as tk
+import sys
 
 window = tk.Tk()
 
 num = 1
 
 
-def guess_text():
-    guess = int(lbl_guess["text"])
-    lbl_guess["text"] = f"{guess + 1}"
+def menun():
+    lbl_guess["text"] = "MENU"
 
 
-# def num_1():
-#     num = 1
-#     return num
+def guess_text(num):
+    num = str(lbl_guess["text"])
+    lbl_guess["text"] = f"{num}"
 
 
-# def num_2():
-#     num = 2
-#     return num
-
-
-# def num_3():
-#     num = 3
-#     return num
-
-
-# def num_4():
-#     num = 4
-#     return num
-
-
-# def num_5():
-#     num = 5
-#     return num
-
-
-# def num_6():
-#     num = 6
-#     return num
-
-
-# def num_7():
-#     num = 7
-#     return num
-
-
-# def num_8():
-#     num = 8
-#     return num
-
-
-# def num_9():
-#     num = 9
-#     return num
-
-
-# def num_0():
-#     num = 0
-#     return num
+def exitm():
+    sys.exit()
 
 
 def guess_num(num, guess):
@@ -75,16 +34,10 @@ window.columnconfigure([0, 1, 2], minsize=75, weight=1)
 lbl_guess = tk.Label(master=window, text="0")
 lbl_guess.grid(row=0, column=0, sticky="nsew")
 
-# btn_clr = tk.Button(master=window, text="Clear")
-# btn_clr.grid(row=1, column=3, sticky="nsew")
-
-# btn_etr = tk.Button(master=window, text="Enter")
-# btn_etr.grid(row=2, rowspan=2, column=3, sticky="nsew")
-
-btn_1 = tk.Button(master=window, text="1", command="num=1")
+btn_1 = tk.Button(master=window, text="1", command=guess_text(1))
 btn_1.grid(row=1, column=0, sticky="nsew")
 
-btn_2 = tk.Button(master=window, text="2", command="num=2")
+btn_2 = tk.Button(master=window, text="2", command=guess_text(2))
 btn_2.grid(row=1, column=1, sticky="nsew")
 
 btn_3 = tk.Button(master=window, text="3", command="num=3")
@@ -117,7 +70,7 @@ btn_clr.grid(row=4, column=0, sticky="nsew")
 btn_etr = tk.Button(master=window, text="Enter")
 btn_etr.grid(row=4, column=2, sticky="nsew")
 
-btn_ext = tk.Button(master=window, text="Exit")
+btn_ext = tk.Button(master=window, text="Exit", command=exitm)
 btn_ext.grid(row=5, column=2, sticky="nsew")
 
 btn_men = tk.Button(master=window, text="Menu")
