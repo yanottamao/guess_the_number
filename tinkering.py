@@ -7,12 +7,12 @@ num = 1
 
 
 def menun():
-    lbl_guess["text"] = "MENU"
+    lbl_guess["text"] = f"MENU"
 
 
 def guess_text(num):
-    num = str(lbl_guess["text"])
-    lbl_guess["text"] = f"{num}"
+    # num = int(lbl_guess["text"])
+    lbl_guess["text"] = num
 
 
 def exitm():
