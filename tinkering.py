@@ -6,8 +6,16 @@ window = tk.Tk()
 num = 1
 
 
-def menun():
-    lbl_guess["text"] = f"MENU"
+def menu():
+    lbl_guess["text"] = "MENU"
+
+
+def clear():
+    lbl_guess["text"] = "CLEAR"
+
+
+def submit():
+    lbl_guess["text"] = "SUBMIT"
 
 
 def guess_text(num):
@@ -73,7 +81,7 @@ btn_etr.grid(row=4, column=2, sticky="nsew")
 btn_ext = tk.Button(master=window, text="Exit", command=exitm)
 btn_ext.grid(row=5, column=2, sticky="nsew")
 
-btn_men = tk.Button(master=window, text="Menu")
+btn_men = tk.Button(master=window, text="Menu", command=menun)
 btn_men.grid(row=5, column=0, sticky="nsew")
 
 window.mainloop()
