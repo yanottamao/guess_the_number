@@ -3,7 +3,9 @@ import sys
 
 window = tk.Tk()
 
-num = 1
+
+def enter():
+    lbl_guess["text"] = "ENTER"
 
 
 def menu():
@@ -20,10 +22,11 @@ def submit():
 
 def guess_text(num):
     # num = int(lbl_guess["text"])
-    lbl_guess["text"] = num
+    tes = int(num)
+    lbl_guess["text"] = tes
 
 
-def exitm():
+def exit():
     sys.exit()
 
 
@@ -78,10 +81,10 @@ btn_clr.grid(row=4, column=0, sticky="nsew")
 btn_etr = tk.Button(master=window, text="Enter")
 btn_etr.grid(row=4, column=2, sticky="nsew")
 
-btn_ext = tk.Button(master=window, text="Exit", command=exitm)
+btn_ext = tk.Button(master=window, text="Exit", command=exit)
 btn_ext.grid(row=5, column=2, sticky="nsew")
 
-btn_men = tk.Button(master=window, text="Menu", command=menun)
+btn_men = tk.Button(master=window, text="Menu", command=menu)
 btn_men.grid(row=5, column=0, sticky="nsew")
 
 window.mainloop()
