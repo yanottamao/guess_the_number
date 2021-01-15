@@ -75,10 +75,10 @@ btn_9.grid(row=3, column=2, sticky="nsew")
 btn_0 = tk.Button(master=window, text="0", command="num=0")
 btn_0.grid(row=4, column=1, sticky="nsew")
 
-btn_clr = tk.Button(master=window, text="Clear")
+btn_clr = tk.Button(master=window, text="Clear", command=clear)
 btn_clr.grid(row=4, column=0, sticky="nsew")
 
-btn_etr = tk.Button(master=window, text="Enter")
+btn_etr = tk.Button(master=window, text="Enter", command=enter)
 btn_etr.grid(row=4, column=2, sticky="nsew")
 
 btn_ext = tk.Button(master=window, text="Exit", command=exit)
