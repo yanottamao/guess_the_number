@@ -20,10 +20,15 @@ def submit():
     lbl_guess["text"] = "SUBMIT"
 
 
+def entnum(nume):
+    num = int(nume)
+    guess_text(num)
+
+
 def guess_text(num):
-    # num = int(lbl_guess["text"])
-    tes = int(num)
-    lbl_guess["text"] = tes
+    # # num = int(lbl_guess["text"])
+    # tes = int(num)
+    lbl_guess["text"] = f"{num}"
 
 
 def exit():
@@ -45,10 +50,10 @@ window.columnconfigure([0, 1, 2], minsize=75, weight=1)
 lbl_guess = tk.Label(master=window, text="0")
 lbl_guess.grid(row=0, column=0, sticky="nsew")
 
-btn_1 = tk.Button(master=window, text="1", command=guess_text(1))
+btn_1 = tk.Button(master=window, text="1", command=entnum(1))
 btn_1.grid(row=1, column=0, sticky="nsew")
 
-btn_2 = tk.Button(master=window, text="2", command=guess_text(2))
+btn_2 = tk.Button(master=window, text="2", command=entnum(2))
 btn_2.grid(row=1, column=1, sticky="nsew")
 
 btn_3 = tk.Button(master=window, text="3", command="num=3")
