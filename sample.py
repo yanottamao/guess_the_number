@@ -3,7 +3,7 @@ import random
 
 
 def mpmain():   # initial multi player mode
-    mpl = input('Multi Player Mode: ')
+    mpl = input('Multi Player Mode (Y/N): ')
     print('mp is ' + mpl)   # mpl input checker
     if mpl.lower() in ['y', 'yes']:
         print('This is Multi Player Mode')
