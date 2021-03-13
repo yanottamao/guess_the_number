@@ -15,6 +15,7 @@ def mpmain():   # initial multi player mode
         win(rd, turn)
     else:
         print('Please Enter Yes/Y or No/N ')
+        mpmain()
 
 
 def multipl():
